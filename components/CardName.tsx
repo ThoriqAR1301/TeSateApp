@@ -1,10 +1,14 @@
-import { View, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
+import { View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import ButtonPrimary from '@/components/ButtonPrimary';
-import CardName from '@/components/CardName';
+import ButtonPrimary from './ButtonPrimary';
 
-export default function index() {
+interface CardNameProps {
+  source?: string;
+  titleImage?: string;
+}
+
+export default function CardName({ source, titleImage }: CardNameProps) {
   return (
     <SafeAreaView>
       <View>
@@ -12,5 +16,5 @@ export default function index() {
         <CardName source="" titleImage="John Doe" />
       </View>
     </SafeAreaView>
-  )
+  );
 }
