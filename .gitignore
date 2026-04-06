@@ -1,16 +1,20 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+# .gitignore — TeSate
 
-# dependencies
+# ── Environment ────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Dependencies ───────────────────────────────────────────────
 node_modules/
 
-# Expo
+# ── Expo ───────────────────────────────────────────────────────
 .expo/
 dist/
 web-build/
 expo-env.d.ts
 
-# Native
-.kotlin/
+# ── Build Output ───────────────────────────────────────────────
 *.orig.*
 *.jks
 *.p8
@@ -18,27 +22,13 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
-# Metro
-.metro-health-check*
+.DS_Store
+Thumbs.db
 
-# debug
+*.log
 npm-debug.*
 yarn-debug.*
 yarn-error.*
 
-# macOS
-.DS_Store
-*.pem
-
-# local env files
-.env*.local
-.env
-
-# typescript
-*.tsbuildinfo
-
-app-example
-
-# generated native folders
-/ios
-/android
+.vscode/
+.idea/
